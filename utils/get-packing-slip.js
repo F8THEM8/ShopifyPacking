@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
-import { uploadToGoogleDrive } from '../googleDrive.js';  // Assuming you are still using this for Google Drive upload
+import { uploadToGoogleDrive } from '../utils/googleDrive.js';  // Assuming you are still using this for Google Drive upload
 
 export async function downloadPackingSlip(orderNumber) {
   const browser = await puppeteer.launch();
