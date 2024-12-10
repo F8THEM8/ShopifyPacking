@@ -7,7 +7,7 @@ async function authenticateGoogleDrive() {
   const oauth2Client = new google.auth.OAuth2(
     process.env.GOOGLE_CLIENT_ID,
     process.env.GOOGLE_CLIENT_SECRET,
-    'https://developers.google.com/oauthplayground' // Redirect URI
+    'https://shopify-packing.vercel.app/oauth2callback' // Redirect URI
   );
   
   oauth2Client.setCredentials({
