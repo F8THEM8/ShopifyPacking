@@ -1,5 +1,5 @@
 // api/orderWebhook.js
-import { downloadPackingSlip } from './utils/get-packing-slip'; // Import the download function
+import { downloadPackingSlip } from './utils/get-packing-slip.js'; // Import the download function
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
