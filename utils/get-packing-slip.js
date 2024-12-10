@@ -10,7 +10,9 @@ export async function downloadPackingSlip(orderNumber) {
     // Launch Puppeteer
     browser = await puppeteer.launch({
       args: [...chromium.args, '--no-sandbox', '--disable-setuid-sandbox'],
-      executablePath: process.env.NODE_ENV === 'production' ? await chromium.executablePath : undefined,
+      executablePath: process.env.NODE_ENV === 'production' 
+        ? await chromium.executablePath 
+        : '/usr/bin/chromium-browser', // Pointing to your local chromium
       headless: chromium.headless,
     });
 
