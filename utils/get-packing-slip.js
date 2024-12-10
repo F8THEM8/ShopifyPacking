@@ -1,10 +1,9 @@
-const puppeteer = require('puppeteer');
-const { google } = require('googleapis');
-const fs = require('fs');
-const path = require('path');
-const { uploadToGoogleDrive } = require('./googleDrive');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import path from 'path';
+import { uploadToGoogleDrive } from '../googleDrive.js';  // Assuming you are still using this for Google Drive upload
 
-async function downloadPackingSlip(orderNumber) {
+export async function downloadPackingSlip(orderNumber) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -42,6 +41,3 @@ async function downloadPackingSlip(orderNumber) {
   await browser.close();
   fs.unlinkSync(filePath);
 }
-
-// Export the function to be used in Vercel
-module.exports = { downloadPackingSlip };

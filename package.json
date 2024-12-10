@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "puppeteer": "^23.10.2"
+  },
+  "scripts": {
+    "start": "node api/orderWebhook.js"
+  }
+}

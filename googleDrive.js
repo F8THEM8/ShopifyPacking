@@ -1,6 +1,5 @@
-const { google } = require('googleapis');
-const fs = require('fs');
-const path = require('path');
+import { google } from 'googleapis';
+import fs from 'fs';
 
 // Google Drive API Authentication
 async function authenticateGoogleDrive() {
@@ -9,7 +8,7 @@ async function authenticateGoogleDrive() {
     process.env.GOOGLE_CLIENT_SECRET,
     'https://shopify-packing.vercel.app/oauth2callback' // Redirect URI
   );
-  
+
   oauth2Client.setCredentials({
     refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
   });
@@ -42,4 +41,4 @@ async function uploadToGoogleDrive(filePath, fileName) {
   }
 }
 
-module.exports = { uploadToGoogleDrive };
+export { uploadToGoogleDrive };
