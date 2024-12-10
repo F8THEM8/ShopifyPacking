@@ -9,7 +9,7 @@ async function downloadPackingSlip(orderNumber) {
   const page = await browser.newPage();
 
   // Login to Shopify Admin
-  await page.goto('https://your-shopify-admin-url');
+  await page.goto('https://7r4f3s-11.myshopify.com');
   await page.type('#LoginEmail', process.env.SHOPIFY_EMAIL);
   await page.type('#LoginPassword', process.env.SHOPIFY_PASSWORD);
   await page.click('button[type="submit"]');
