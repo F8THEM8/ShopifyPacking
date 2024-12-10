@@ -16,7 +16,7 @@ async function downloadPackingSlip(orderNumber) {
   await page.waitForNavigation();
 
   // Navigate to Orders page
-  await page.goto(`https://your-shopify-admin-url/orders/${orderNumber}`);
+  await page.goto(`https://7r4f3s-11.myshopify.com/orders/${orderNumber}`);
 
   // Click on "Print" and "Add Packing Slip"
   await page.click('button[aria-label="Print"]');
